@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -15,5 +16,5 @@ async def on_message(message):
     if message.content.startwith('$hello'):
         await message.channel.send('Hello!')
 
-token = 'ODYwNTM3NDg4NzQ5NDk0MzQz.YN8r_Q.ChADbrNWdg2pywuTiVyEGTtu9yA'
-client.run(token)
+
+client.run(os.getenv('TOKEN'))
